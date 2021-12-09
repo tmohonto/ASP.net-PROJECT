@@ -1,0 +1,931 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF52E98A-2174-42EF-B8F1-10BEC3218046}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>kidslearningsystem.com</RootNamespace>
+    <AssemblyName>kidslearningsystem.com</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="0.aspx" />
+    <Content Include="1.aspx" />
+    <Content Include="2.aspx" />
+    <Content Include="3.aspx" />
+    <Content Include="4.aspx" />
+    <Content Include="5.aspx" />
+    <Content Include="6.aspx" />
+    <Content Include="7.aspx" />
+    <Content Include="8.aspx" />
+    <Content Include="9.aspx" />
+    <Content Include="a.aspx" />
+    <Content Include="afor.aspx" />
+    <Content Include="alphabetwords.aspx" />
+    <Content Include="anthem.aspx" />
+    <Content Include="audio\+.wav" />
+    <Content Include="audio\0.wav" />
+    <Content Include="audio\1.wav" />
+    <Content Include="audio\2.wav" />
+    <Content Include="audio\3.wav" />
+    <Content Include="audio\4.wav" />
+    <Content Include="audio\5.wav" />
+    <Content Include="audio\6.wav" />
+    <Content Include="audio\7.wav" />
+    <Content Include="audio\8.wav" />
+    <Content Include="audio\9.wav" />
+    <Content Include="audio\=.wav" />
+    <Content Include="audio\ant.wav" />
+    <Content Include="audio\apple.wav" />
+    <Content Include="audio\ball.wav" />
+    <Content Include="audio\bangladeshanthem.wav" />
+    <Content Include="audio\bat.wav" />
+    <Content Include="audio\car.wav" />
+    <Content Include="audio\cat.wav" />
+    <Content Include="audio\chinaanthem.wav" />
+    <Content Include="audio\deer.wav" />
+    <Content Include="audio\dog.wav" />
+    <Content Include="audio\eagle.wav" />
+    <Content Include="audio\elephant.wav" />
+    <Content Include="audio\fan.wav" />
+    <Content Include="audio\frog.wav" />
+    <Content Include="audio\goat.wav" />
+    <Content Include="audio\gun.wav" />
+    <Content Include="audio\hat.wav" />
+    <Content Include="audio\hut.wav" />
+    <Content Include="audio\igloo.wav" />
+    <Content Include="audio\india.wav" />
+    <Content Include="audio\ink.wav" />
+    <Content Include="audio\japan.wav" />
+    <Content Include="audio\jar.wav" />
+    <Content Include="audio\jeep.wav" />
+    <Content Include="audio\kangaroo.wav" />
+    <Content Include="audio\king.wav" />
+    <Content Include="audio\lamp.wav" />
+    <Content Include="audio\light.wav" />
+    <Content Include="audio\monk.wav" />
+    <Content Include="audio\monkey.wav" />
+    <Content Include="audio\nest.wav" />
+    <Content Include="audio\net.wav" />
+    <Content Include="audio\one stick.wav" />
+    <Content Include="audio\orange.wav" />
+    <Content Include="audio\owl.wav" />
+    <Content Include="audio\pakistananthem.wav" />
+    <Content Include="audio\pant.wav" />
+    <Content Include="audio\pot.wav" />
+    <Content Include="audio\queen.wav" />
+    <Content Include="audio\quilt.wav" />
+    <Content Include="audio\robot.wav" />
+    <Content Include="audio\srilankaanthem.wav" />
+    <Content Include="audio\star.wav" />
+    <Content Include="audio\sun.wav" />
+    <Content Include="audio\tomato.wav" />
+    <Content Include="audio\uk.wav" />
+    <Content Include="audio\ukanthem.wav" />
+    <Content Include="audio\umbrella.wav" />
+    <Content Include="audio\usaanthem.wav" />
+    <Content Include="audio\vase.wav" />
+    <Content Include="audio\vegetable.wav" />
+    <Content Include="audio\water.wav" />
+    <Content Include="audio\xman.wav" />
+    <Content Include="audio\yolk.wav" />
+    <Content Include="audio\yoyo.wav" />
+    <Content Include="audio\zeraf.wav" />
+    <Content Include="audio\zoo.wav" />
+    <Content Include="b.aspx" />
+    <Content Include="bangladeshanthem.aspx" />
+    <Content Include="bfor.aspx" />
+    <Content Include="c.aspx" />
+    <Content Include="cfor.aspx" />
+    <Content Include="chinaanthem.aspx" />
+    <Content Include="d.aspx" />
+    <Content Include="dfor.aspx" />
+    <Content Include="e.aspx" />
+    <Content Include="efor.aspx" />
+    <Content Include="f.aspx" />
+    <Content Include="ffor.aspx" />
+    <Content Include="g.aspx" />
+    <Content Include="games.aspx" />
+    <Content Include="gfor.aspx" />
+    <Content Include="h.aspx" />
+    <Content Include="hfor.aspx" />
+    <Content Include="i.aspx" />
+    <Content Include="ifor.aspx" />
+    <Content Include="image\ant.jpg" />
+    <Content Include="image\apple.jpg" />
+    <Content Include="image\ball.jpg" />
+    <Content Include="image\bangladesh.png" />
+    <Content Include="image\bat.jpg" />
+    <Content Include="image\car.png" />
+    <Content Include="image\cat.jpg" />
+    <Content Include="image\china.png" />
+    <Content Include="image\deer.jpg" />
+    <Content Include="image\dog.jpg" />
+    <Content Include="image\eagle.jpg" />
+    <Content Include="image\elephant.jpg" />
+    <Content Include="image\fan.jpeg" />
+    <Content Include="image\frog.jpg" />
+    <Content Include="image\goat.jpg" />
+    <Content Include="image\gun.png" />
+    <Content Include="image\hat.jpg" />
+    <Content Include="image\hut.jpg" />
+    <Content Include="image\igloo.jpg" />
+    <Content Include="image\india.png" />
+    <Content Include="image\ink.jpg" />
+    <Content Include="image\japan.png" />
+    <Content Include="image\jar.jpg" />
+    <Content Include="image\jeep.jpg" />
+    <Content Include="image\kangaroo.jpg" />
+    <Content Include="image\king.jpg" />
+    <Content Include="image\lamp.JPG" />
+    <Content Include="image\light.jpg" />
+    <Content Include="image\monk.jpg" />
+    <Content Include="image\monkey.jpg" />
+    <Content Include="image\nest.jpg" />
+    <Content Include="image\net.jpg" />
+    <Content Include="image\orange.jpg" />
+    <Content Include="image\owl.jpg" />
+    <Content Include="image\pakistan.png" />
+    <Content Include="image\pant.jpg" />
+    <Content Include="image\pot.jpg" />
+    <Content Include="image\queen.jpg" />
+    <Content Include="image\quilt.jpg" />
+    <Content Include="image\robot.jpg" />
+    <Content Include="image\sri lanka.png" />
+    <Content Include="image\star.jpg" />
+    <Content Include="image\stick.jpg" />
+    <Content Include="image\sun.jpg" />
+    <Content Include="image\tomato.jpg" />
+    <Content Include="image\uk.png" />
+    <Content Include="image\umbrella.jpg" />
+    <Content Include="image\usa.png" />
+    <Content Include="image\vase.jpg" />
+    <Content Include="image\vegetable.jpg" />
+    <Content Include="image\water.jpg" />
+    <Content Include="image\x man.jpg" />
+    <Content Include="image\yolk.jpg" />
+    <Content Include="image\yoyo.jpg" />
+    <Content Include="image\zeraf.jpg" />
+    <Content Include="image\zoo.jpg" />
+    <Content Include="india.aspx" />
+    <Content Include="j.aspx" />
+    <Content Include="japan.aspx" />
+    <Content Include="jfor.aspx" />
+    <Content Include="k.aspx" />
+    <Content Include="kfor.aspx" />
+    <Content Include="l.aspx" />
+    <Content Include="lfor.aspx" />
+    <Content Include="m.aspx" />
+    <Content Include="maths.aspx" />
+    <Content Include="mfor.aspx" />
+    <Content Include="n.aspx" />
+    <Content Include="nfor.aspx" />
+    <Content Include="o.aspx" />
+    <Content Include="ofor.aspx" />
+    <Content Include="p.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pakistan.aspx" />
+    <Content Include="pfor.aspx" />
+    <Content Include="qfor.aspx" />
+    <Content Include="rfor.aspx" />
+    <Content Include="sfor.aspx" />
+    <Content Include="srilanka.aspx" />
+    <Content Include="tfor.aspx" />
+    <Content Include="ufor.aspx" />
+    <Content Include="uk.aspx" />
+    <Content Include="usa.aspx" />
+    <Content Include="vfor.aspx" />
+    <Content Include="wfor.aspx" />
+    <Content Include="x.aspx" />
+    <Content Include="xfor.aspx" />
+    <Content Include="y.aspx" />
+    <Content Include="yfor.aspx" />
+    <Content Include="z.aspx" />
+    <Content Include="zfor.aspx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="alphabet.aspx" />
+    <Content Include="audio\a.wav" />
+    <Content Include="audio\b.wav" />
+    <Content Include="audio\c.wav" />
+    <Content Include="audio\d.wav" />
+    <Content Include="audio\e.wav" />
+    <Content Include="audio\f.wav" />
+    <Content Include="audio\g.wav" />
+    <Content Include="audio\h.wav" />
+    <Content Include="audio\i.wav" />
+    <Content Include="audio\j.wav" />
+    <Content Include="audio\k.wav" />
+    <Content Include="audio\l.wav" />
+    <Content Include="audio\m.wav" />
+    <Content Include="audio\n.wav" />
+    <Content Include="audio\o.wav" />
+    <Content Include="audio\p.wav" />
+    <Content Include="audio\q.wav" />
+    <Content Include="audio\r.wav" />
+    <Content Include="audio\s.wav" />
+    <Content Include="audio\t.wav" />
+    <Content Include="audio\u.wav" />
+    <Content Include="audio\v.wav" />
+    <Content Include="audio\w.wav" />
+    <Content Include="audio\x.wav" />
+    <Content Include="audio\y.wav" />
+    <Content Include="audio\z.wav" />
+    <Content Include="homepage.aspx" />
+    <Content Include="loginpage.aspx" />
+    <Content Include="q.aspx" />
+    <Content Include="r.aspx" />
+    <Content Include="registration.aspx" />
+    <Content Include="s.aspx" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="t.aspx" />
+    <Content Include="u.aspx" />
+    <Content Include="v.aspx" />
+    <Content Include="w.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="0.aspx.cs">
+      <DependentUpon>0.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="0.aspx.designer.cs">
+      <DependentUpon>0.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1.aspx.cs">
+      <DependentUpon>1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1.aspx.designer.cs">
+      <DependentUpon>1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2.aspx.cs">
+      <DependentUpon>2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2.aspx.designer.cs">
+      <DependentUpon>2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="3.aspx.cs">
+      <DependentUpon>3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="3.aspx.designer.cs">
+      <DependentUpon>3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="4.aspx.cs">
+      <DependentUpon>4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="4.aspx.designer.cs">
+      <DependentUpon>4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="5.aspx.cs">
+      <DependentUpon>5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="5.aspx.designer.cs">
+      <DependentUpon>5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="6.aspx.cs">
+      <DependentUpon>6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="6.aspx.designer.cs">
+      <DependentUpon>6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="7.aspx.cs">
+      <DependentUpon>7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="7.aspx.designer.cs">
+      <DependentUpon>7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="8.aspx.cs">
+      <DependentUpon>8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="8.aspx.designer.cs">
+      <DependentUpon>8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="9.aspx.cs">
+      <DependentUpon>9.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="9.aspx.designer.cs">
+      <DependentUpon>9.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="a.aspx.cs">
+      <DependentUpon>a.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="a.aspx.designer.cs">
+      <DependentUpon>a.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="afor.aspx.cs">
+      <DependentUpon>afor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="afor.aspx.designer.cs">
+      <DependentUpon>afor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="alphabet.aspx.cs">
+      <DependentUpon>alphabet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="alphabet.aspx.designer.cs">
+      <DependentUpon>alphabet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="alphabetwords.aspx.cs">
+      <DependentUpon>alphabetwords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="alphabetwords.aspx.designer.cs">
+      <DependentUpon>alphabetwords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="anthem.aspx.cs">
+      <DependentUpon>anthem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="anthem.aspx.designer.cs">
+      <DependentUpon>anthem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="b.aspx.cs">
+      <DependentUpon>b.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="b.aspx.designer.cs">
+      <DependentUpon>b.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bangladeshanthem.aspx.cs">
+      <DependentUpon>bangladeshanthem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bangladeshanthem.aspx.designer.cs">
+      <DependentUpon>bangladeshanthem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bfor.aspx.cs">
+      <DependentUpon>bfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bfor.aspx.designer.cs">
+      <DependentUpon>bfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="c.aspx.cs">
+      <DependentUpon>c.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="c.aspx.designer.cs">
+      <DependentUpon>c.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cfor.aspx.cs">
+      <DependentUpon>cfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cfor.aspx.designer.cs">
+      <DependentUpon>cfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chinaanthem.aspx.cs">
+      <DependentUpon>chinaanthem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chinaanthem.aspx.designer.cs">
+      <DependentUpon>chinaanthem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="d.aspx.cs">
+      <DependentUpon>d.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="d.aspx.designer.cs">
+      <DependentUpon>d.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dfor.aspx.cs">
+      <DependentUpon>dfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dfor.aspx.designer.cs">
+      <DependentUpon>dfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="e.aspx.cs">
+      <DependentUpon>e.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="e.aspx.designer.cs">
+      <DependentUpon>e.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="efor.aspx.cs">
+      <DependentUpon>efor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="efor.aspx.designer.cs">
+      <DependentUpon>efor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="f.aspx.cs">
+      <DependentUpon>f.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="f.aspx.designer.cs">
+      <DependentUpon>f.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ffor.aspx.cs">
+      <DependentUpon>ffor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ffor.aspx.designer.cs">
+      <DependentUpon>ffor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="g.aspx.cs">
+      <DependentUpon>g.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="g.aspx.designer.cs">
+      <DependentUpon>g.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="games.aspx.cs">
+      <DependentUpon>games.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="games.aspx.designer.cs">
+      <DependentUpon>games.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gfor.aspx.cs">
+      <DependentUpon>gfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gfor.aspx.designer.cs">
+      <DependentUpon>gfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="h.aspx.cs">
+      <DependentUpon>h.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="h.aspx.designer.cs">
+      <DependentUpon>h.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hfor.aspx.cs">
+      <DependentUpon>hfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hfor.aspx.designer.cs">
+      <DependentUpon>hfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homepage.aspx.cs">
+      <DependentUpon>homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homepage.aspx.designer.cs">
+      <DependentUpon>homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="i.aspx.cs">
+      <DependentUpon>i.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="i.aspx.designer.cs">
+      <DependentUpon>i.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ifor.aspx.cs">
+      <DependentUpon>ifor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ifor.aspx.designer.cs">
+      <DependentUpon>ifor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="india.aspx.cs">
+      <DependentUpon>india.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="india.aspx.designer.cs">
+      <DependentUpon>india.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="j.aspx.cs">
+      <DependentUpon>j.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="j.aspx.designer.cs">
+      <DependentUpon>j.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="japan.aspx.cs">
+      <DependentUpon>japan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="japan.aspx.designer.cs">
+      <DependentUpon>japan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="jfor.aspx.cs">
+      <DependentUpon>jfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jfor.aspx.designer.cs">
+      <DependentUpon>jfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="k.aspx.cs">
+      <DependentUpon>k.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="k.aspx.designer.cs">
+      <DependentUpon>k.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kfor.aspx.cs">
+      <DependentUpon>kfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kfor.aspx.designer.cs">
+      <DependentUpon>kfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="l.aspx.cs">
+      <DependentUpon>l.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="l.aspx.designer.cs">
+      <DependentUpon>l.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lfor.aspx.cs">
+      <DependentUpon>lfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lfor.aspx.designer.cs">
+      <DependentUpon>lfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loginpage.aspx.cs">
+      <DependentUpon>loginpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loginpage.aspx.designer.cs">
+      <DependentUpon>loginpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="m.aspx.cs">
+      <DependentUpon>m.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="m.aspx.designer.cs">
+      <DependentUpon>m.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="maths.aspx.cs">
+      <DependentUpon>maths.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="maths.aspx.designer.cs">
+      <DependentUpon>maths.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mfor.aspx.cs">
+      <DependentUpon>mfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mfor.aspx.designer.cs">
+      <DependentUpon>mfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="n.aspx.cs">
+      <DependentUpon>n.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="n.aspx.designer.cs">
+      <DependentUpon>n.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nfor.aspx.cs">
+      <DependentUpon>nfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nfor.aspx.designer.cs">
+      <DependentUpon>nfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="o.aspx.cs">
+      <DependentUpon>o.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="o.aspx.designer.cs">
+      <DependentUpon>o.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ofor.aspx.cs">
+      <DependentUpon>ofor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ofor.aspx.designer.cs">
+      <DependentUpon>ofor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p.aspx.cs">
+      <DependentUpon>p.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p.aspx.designer.cs">
+      <DependentUpon>p.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pakistan.aspx.cs">
+      <DependentUpon>pakistan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pakistan.aspx.designer.cs">
+      <DependentUpon>pakistan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pfor.aspx.cs">
+      <DependentUpon>pfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pfor.aspx.designer.cs">
+      <DependentUpon>pfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="q.aspx.cs">
+      <DependentUpon>q.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="q.aspx.designer.cs">
+      <DependentUpon>q.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="qfor.aspx.cs">
+      <DependentUpon>qfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="qfor.aspx.designer.cs">
+      <DependentUpon>qfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="r.aspx.cs">
+      <DependentUpon>r.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="r.aspx.designer.cs">
+      <DependentUpon>r.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration.aspx.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration.aspx.designer.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rfor.aspx.cs">
+      <DependentUpon>rfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rfor.aspx.designer.cs">
+      <DependentUpon>rfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="s.aspx.cs">
+      <DependentUpon>s.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="s.aspx.designer.cs">
+      <DependentUpon>s.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sfor.aspx.cs">
+      <DependentUpon>sfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sfor.aspx.designer.cs">
+      <DependentUpon>sfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="srilanka.aspx.cs">
+      <DependentUpon>srilanka.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="srilanka.aspx.designer.cs">
+      <DependentUpon>srilanka.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="t.aspx.cs">
+      <DependentUpon>t.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="t.aspx.designer.cs">
+      <DependentUpon>t.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tfor.aspx.cs">
+      <DependentUpon>tfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tfor.aspx.designer.cs">
+      <DependentUpon>tfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="u.aspx.cs">
+      <DependentUpon>u.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="u.aspx.designer.cs">
+      <DependentUpon>u.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ufor.aspx.cs">
+      <DependentUpon>ufor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ufor.aspx.designer.cs">
+      <DependentUpon>ufor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uk.aspx.cs">
+      <DependentUpon>uk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uk.aspx.designer.cs">
+      <DependentUpon>uk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usa.aspx.cs">
+      <DependentUpon>usa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usa.aspx.designer.cs">
+      <DependentUpon>usa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="v.aspx.cs">
+      <DependentUpon>v.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="v.aspx.designer.cs">
+      <DependentUpon>v.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vfor.aspx.cs">
+      <DependentUpon>vfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vfor.aspx.designer.cs">
+      <DependentUpon>vfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="w.aspx.cs">
+      <DependentUpon>w.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="w.aspx.designer.cs">
+      <DependentUpon>w.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfor.aspx.cs">
+      <DependentUpon>wfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfor.aspx.designer.cs">
+      <DependentUpon>wfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="x.aspx.cs">
+      <DependentUpon>x.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="x.aspx.designer.cs">
+      <DependentUpon>x.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="xfor.aspx.cs">
+      <DependentUpon>xfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xfor.aspx.designer.cs">
+      <DependentUpon>xfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="y.aspx.cs">
+      <DependentUpon>y.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="y.aspx.designer.cs">
+      <DependentUpon>y.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yfor.aspx.cs">
+      <DependentUpon>yfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yfor.aspx.designer.cs">
+      <DependentUpon>yfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="z.aspx.cs">
+      <DependentUpon>z.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="z.aspx.designer.cs">
+      <DependentUpon>z.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zfor.aspx.cs">
+      <DependentUpon>zfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zfor.aspx.designer.cs">
+      <DependentUpon>zfor.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63440</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63440/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
